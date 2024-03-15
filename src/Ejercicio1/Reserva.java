@@ -59,6 +59,30 @@ public class Reserva {
         System.out.println("Mesa individual: 2.5 euros");
         System.out.println("Mesa doble: 4.50 euros");
         System.out.println("Mesa grupal: 7.9 euros");
+
+        //Bucle hastaque el usuario indique que no quiere reservar otra mesa
+        int continuar = 1;
+        while (continuar == 1){
+            System.out.println("¿Quiere reservar otra mesa? Pulse 1 para continuar o 0 para salir");
+            continuar = sc.nextInt();
+            if (continuar == 1){
+                System.out.println("Por favor, indique el número de personas que serán atendidas:");
+                numeroPersonas = sc.nextInt();
+                if (numeroPersonas == 1){
+                    System.out.println("La mesa individual tiene un precio de 2.5 euros");
+                } else if (numeroPersonas == 2){
+                    System.out.println("La mesa doble tiene un precio de 5.0 euros");
+                } else if (numeroPersonas > 2 && numeroPersonas < 7){
+                    System.out.println("La mesa grupal tiene un precio de 7.9 euros");
+                }
+                else if(numeroPersonas > 6){
+                    System.out.println("Por favor, reserve dos mesas grupales");
+                }
+                else{
+                    System.out.println("Por favor, introduzca un número válido");
+                }
+            }
+        }
         //Eleccion de mesa
         System.out.println("Por favor, escriba la mesa que quiere reservar");
         System.out.println("Las opciones son: individual, doble, grupal");
