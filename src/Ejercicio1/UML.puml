@@ -1,0 +1,49 @@
+@startuml
+abstract class Mesa {
+    - numero : int
+    - capacidad : int
+    - precio : double
+    + Mesa(numero : int, capacidad : int, precio : double)
+    + getNumero() : int
+    + getCapacidad() : int
+    + enseñar() : void
+}
+
+class Grupo {
+    - precio : double = 7.9
+    + Grupo(numero : int)
+    + getPrecio() : double
+    + setPrecio(precio : double) : double
+    + enseñar() : void
+}
+
+class Individual {
+    - precio : double = 2.5
+    + Individual(numero : int)
+    + getPrecio() : double
+    + setPrecio(precio : double) : double
+    + enseñar() : void
+}
+
+class Doble {
+    - precio : double = 5.0
+    + Doble(numero : int)
+    + getPrecio() : double
+    + setPrecio(precio : double) : double
+    + enseñar() : void
+}
+
+class Reserva {
+    - mesas : ArrayList<Mesa>
+    - individual : Mesa
+    - doble : Mesa
+    - grupo : Mesa
+    + ReservarMesa() : void
+    + main(args : String[]) : void
+}
+
+Mesa <|-- Doble
+Mesa <|-- Individual
+Mesa <|-- Grupo
+Reserva "1" -- "many" Mesa : contains
+@enduml
