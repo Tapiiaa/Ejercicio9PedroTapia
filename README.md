@@ -1,5 +1,7 @@
 Entrega 9 Técnicas de Programación: 
 Realizado por Pedro Tapia 
+
+Link a mi repositorio: https://github.com/Tapiiaa/Ejercicio9PedroTapia.git
 Ejercicio 1
 
 Enunciado: 
